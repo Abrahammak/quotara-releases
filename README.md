@@ -10,6 +10,12 @@ Use the assets on the [latest stable release](https://github.com/Abrahammak/quot
 
 Each production release includes the installer, its `.sha256` file, `SHA256SUMS.txt`, the Ed25519-signed `update-manifest.json`, and release notes.
 
+## 4.1.0 signing trust
+
+Version 4.1.0 uses a self-signed Heytronix Limited certificate for controlled environments. It is not publicly CA-trusted and carries no SmartScreen reputation claim. Windows may reject the signature until the verified public certificate is explicitly trusted in the controlled environment. The updater does not bypass this trust check.
+
+Expected signer thumbprint: `6355FB71B4BC1B605A45C5BACD055C89326759F2`.
+
 ## Verify the installer
 
 In PowerShell, compute the downloaded installer's SHA-256:
